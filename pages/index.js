@@ -12,9 +12,10 @@ import {
   Icon,
   useColorModeValue
 } from '@chakra-ui/react'
-
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
-
+import Section from '../components/section'
+import Paragraph from '../components/paragraph'
 
 const Home = () => (
 <Layout>
@@ -55,6 +56,31 @@ const Home = () => (
           />
         </Box>
       </Box>
+
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          Work
+        </Heading>
+        <Paragraph>
+          Romuel is a freelance and a full-stack developer based in Manila with a
+          passion for building digital services/stuff he wants. He has a knack
+          for all things launching products, from planning and designing all the
+          way to solving real-life problems with code. When not online, he loves
+          hanging out with his camera. Currently, he is living off of his own
+          product called{' '}
+          <NextLink href="/works/inkdrop" scroll={false}>
+            <Link>Inkdrop</Link>
+          </NextLink>
+          .
+        </Paragraph>
+        <Box align="center" my={4}>
+          <NextLink href="/works" scroll={false}>
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              My portfolio
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
 
     </Container>
   </Layout>
