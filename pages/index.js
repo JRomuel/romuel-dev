@@ -58,13 +58,13 @@ const Home = () => (
           About Me
         </Heading>
         <Paragraph>
-              Hello, I'm Romuel, a web developer based on Manila, Philippines who enjoys building things live on the internet. I develop exceptional websites and web apps that provide intuitive, pixel perfect user interfaces with clean design and retina ready display.
+              Hello, I&lsquo;m Romuel, a web developer based on Manila, Philippines who enjoys building things live on the internet. I develop exceptional websites and web apps that provide intuitive, pixel perfect user interfaces with clean design and retina ready display.
         </Paragraph>
         <Paragraph>
               Shortly after graduating from college, I worked as a designer for one and a half year then shift my career as a web developer. I worked on wide variety of interesting and meaningful projects on daily basis.
         </Paragraph>
         <Text mb={5}>
-              Here are a few technologies I've been working with recently
+              Here are a few technologies I&lsquo;ve been working with recently
         </Text>
 
 
@@ -121,7 +121,7 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>2010</BioYear>
-          Completed the Master's Program in the Graduate School of
+          Completed the Master&lsquo;s Program in the Graduate School of
           Information Science at Nara Institute of Science and Technology
           (奈良先端科学技術大学院大学情報科学研究科修士課程)
         </BioSection>
