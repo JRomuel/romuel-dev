@@ -52,7 +52,7 @@ const Navbar = props => {
       <Container
         display="flex"
         p={2}
-        maxW="container.md"
+        maxW="container.lg"
         wrap="wrap"
         align="center"
         justify="space-between"
@@ -63,35 +63,36 @@ const Navbar = props => {
           </Heading>
         </Flex>
 
-        <Stack
-          direction={{ base: 'column', md: 'row' }}
-          display={{ base: 'none', md: 'flex' }}
-          width={{ base: 'full', md: 'auto' }}
-          alignItems="center"
-          flexGrow={1}
-          mt={{ base: 4, md: 0 }}
-        >
-          <LinkItem href="/works" path={path}>
-            Works
-          </LinkItem>
-          {/* <LinkItem href="/posts" path={path}>
-            Posts
-          </LinkItem> */}
-          <LinkItem
-            _target="_blank"
-            href="https://github.com/craftzdog/craftzdog-homepage"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
-            <IoLogoGithub />
-            Source
-          </LinkItem>
-        </Stack>
 
-        <Box flex={1} align="right">
+
+        <Flex flex={1} align="right" justifyContent="flex-end">
+          <Stack
+            direction={{ base: 'column', md: 'row' }}
+            display={{ base: 'none', md: 'flex' }}
+            width={{ base: 'full', md: 'auto' }}
+            justifyContent="flex-end"
+            alignItems="center"
+            flexGrow={1}
+            mt={{ base: 4, md: 0 }}
+          >
+            <LinkItem href="/works" path={path}>
+              Works
+            </LinkItem>
+            <LinkItem href="/posts" path={path}>
+              Posts
+            </LinkItem>
+  
+          </Stack>
+
+
+          <IconButton
+      
+          aria-label="Toggle theme"
+          bg="transparent"
+          icon={<IoLogoGithub />}
+          _target="_blank"
+          href="https://github.com/craftzdog/craftzdog-homepage"
+        ></IconButton>
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
@@ -109,9 +110,9 @@ const Navbar = props => {
                 <NextLink href="/works" passHref>
                   <MenuItem as={Link}>Works</MenuItem>
                 </NextLink>
-                {/* <NextLink href="/posts" passHref>
+                <NextLink href="/posts" passHref>
                   <MenuItem as={Link}>Posts</MenuItem>
-                </NextLink> */}
+                </NextLink>
                 <MenuItem
                   as={Link}
                   href="https://github.com/craftzdog/craftzdog-homepage"
@@ -121,7 +122,7 @@ const Navbar = props => {
               </MenuList>
             </Menu>
           </Box>
-        </Box>
+        </Flex>
       </Container>
     </Box>
   )

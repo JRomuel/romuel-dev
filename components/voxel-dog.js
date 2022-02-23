@@ -13,7 +13,7 @@ const VoxelDog = () => {
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
-  const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
+  const [target] = useState(new THREE.Vector3(0, 5, 0 ))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
       20 * Math.sin(0.2 * Math.PI),
@@ -29,7 +29,6 @@ const VoxelDog = () => {
     if (container && renderer) {
       const scW = container.clientWidth
       const scH = container.clientHeight
-
       renderer.setSize(scW, scH)
     }
   }, [renderer])
@@ -53,7 +52,8 @@ const VoxelDog = () => {
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scH * 0.005 + 4.8
+      const scale = scH * 0.005 + 5.8
+      console.log(scale);
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
@@ -69,12 +69,21 @@ const VoxelDog = () => {
       const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
       scene.add(ambientLight)
 
+      // const axesHelper = new THREE.AxesHelper(5);
+      // scene.add(axesHelper);
+
+      // const size = 10;
+      // const divisions = 10;
+
+      // const gridHelper = new THREE.GridHelper( size, divisions );
+      // scene.add( gridHelper );
+
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, '/hilda2.glb', {
+      loadGLTFModel(scene, '/box2.glb', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {

@@ -22,21 +22,14 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
+  const footPrintImg = `/images/logo-new-2.0.svg`
 
   return (
     <Link href="/">
       <a>
         <LogoBox>
-          <Image src={footPrintImg} width={20} height={20} alt="logo" />
-          <Text
-            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-            fontFamily='M PLUS Rounded 1c", sans-serif'
-            fontWeight="bold"
-            ml={3}
-          >
-            Romuel Mendoza
-          </Text>
+          <Image src={footPrintImg} width={30} height={30} alt="logo" />
+      
         </LogoBox>
       </a>
     </Link>

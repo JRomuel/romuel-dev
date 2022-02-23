@@ -10,79 +10,209 @@ import {
   List,
   ListItem,
   Icon,
-  useColorModeValue
+  Text,
+  UnorderedList,
+  ListIcon,
+  useColorModeValue,
+  Grid, 
+  GridItem
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import { RiArrowDropRightFill } from 'react-icons/ri'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
+import { BioSection, BioYear } from '../components/bio'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { griditem } from '../components/grid-item'
+import thumbYouTube from '../public/images/links/youtube.png'
+import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import VoxelDogLoader from '../components/voxel-dog-loader'
+import dynamic from 'next/dynamic'
+const LazyVoxelDog = dynamic(() => import('../components/voxel-dog'), {
+  ssr: false,
+  loading: () => <VoxelDogLoader />
+})
+
 
 const Home = () => (
 <Layout>
-    <Container>
-      <Box
-        borderRadius="lg"
-        mt={8}
-        mb={6}
-        p={3}
-        textAlign="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-      >
-        Hello, I&apos;m a full-stack developer based in Manila!
-      </Box>
+    
+      <Box display={{ md: 'flex' }} flexDirection="row-reverse" alignItems="center">
 
-      <Box display={{ md: 'flex' }}>
+        <LazyVoxelDog />
+
         <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
+          <Text
+            color={'purple.400'}
+          >Hi, my name is</Text>
+          <Heading as="h1" variant="page-title">
             JR Mendoza
           </Heading>
           <p>( Developer / Web Designer )</p>
-        </Box>
-        <Box
-          flexShrink={0}
-          mt={{ base: 4, md: 0 }}
-          ml={{ md: 6 }}
-          textAlign="center"
-        >
-          <Image
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            maxWidth="100px"
-            display="inline-block"
-            borderRadius="full"
-            src="/images/romuel.jpg"
-            alt="Profile image"
-          />
         </Box>
       </Box>
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          About Me
         </Heading>
         <Paragraph>
-          Romuel is a freelance and a full-stack developer based in Manila with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <NextLink href="/works/inkdrop" scroll={false}>
-            <Link>Inkdrop</Link>
-          </NextLink>
-          .
+              Hello, I&rsquo;m Romuel, a web developer based on Manila, Philippines who enjoys building things live on the internet. I develop exceptional websites and web apps that provide intuitive, pixel perfect user interfaces with clean design and retina ready display.
         </Paragraph>
-        <Box align="center" my={4}>
+        <Paragraph>
+              Shortly after graduating from college, I worked as a designer for one and a half year then shift my career as a web developer. I worked on wide variety of interesting and meaningful projects on daily basis.
+        </Paragraph>
+        <Text mb={5}>
+              Here are a few technologies I've been working with recently
+        </Text>
+
+
+        <Grid templateColumns='repeat(6, 1fr)' gap={6} mb={5}>
+          <GridItem w='100%' colSpan={{ base: 3, md: 2 }}>
+            <List>
+              <ListItem>
+                <ListIcon as={RiArrowDropRightFill} color='purple.500' />
+                Next.js
+              </ListItem>
+              <ListItem>
+                <ListIcon as={RiArrowDropRightFill} color='purple.500' />
+                React.js
+              </ListItem>
+              <ListItem>
+                <ListIcon as={RiArrowDropRightFill} color='purple.500' />
+                Laravel 6+
+              </ListItem>
+            </List>
+          </GridItem>
+          <GridItem w='100%' colSpan={{ base: 3, md: 2 }}>
+            <List>
+              <ListItem>
+                <ListIcon as={RiArrowDropRightFill} color='purple.500' />
+                Bootstrap
+              </ListItem>
+              <ListItem>
+                <ListIcon as={RiArrowDropRightFill} color='purple.500' />
+                Node.js
+              </ListItem>
+              <ListItem>
+                <ListIcon as={RiArrowDropRightFill} color='purple.500' />
+                SASS
+              </ListItem>
+            </List>
+          </GridItem>
+        </Grid>
+
+        <Box align="center"  my={4}>
           <NextLink href="/works" scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="purple">
+              Checkout my works 
             </Button>
           </NextLink>
         </Box>
       </Section>
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>1984</BioYear>
+          Born in Osaka (大阪), Japan.
+        </BioSection>
+        <BioSection>
+          <BioYear>2010</BioYear>
+          Completed the Master&apos;s Program in the Graduate School of
+          Information Science at Nara Institute of Science and Technology
+          (奈良先端科学技術大学院大学情報科学研究科修士課程)
+        </BioSection>
+        <BioSection>
+          <BioYear>2010</BioYear>
+          Worked at Yahoo! Japan (ヤフー株式会社入社)
+        </BioSection>
+        <BioSection>
+          <BioYear>2012 to present</BioYear>
+          Works as a freelance
+        </BioSection>
+      </Section>
 
-    </Container>
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          I ♥
+        </Heading>
+        <Paragraph>
+          Art, Music,{' '}
+          <Link href="https://illust.odoruinu.net/" target="_blank">
+            Drawing
+          </Link>
+          , Playing Drums,{' '}
+          <Link href="https://500px.com/p/craftzdog" target="_blank">
+            Photography
+          </Link>
+          , Leica, Machine Learning
+        </Paragraph>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          On the web
+        </Heading>
+        <List>
+          <ListItem>
+            <Link href="https://github.com/craftzdog" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<Icon as={IoLogoGithub} />}
+              >
+                @craftzdog
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<Icon as={IoLogoTwitter} />}
+              >
+                @inkdrop_app (English)
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://twitter.com/craftzdog" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<Icon as={IoLogoTwitter} />}
+              >
+                @craftzdog (日本語)
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://instagram.com/craftzdog" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<Icon as={IoLogoInstagram} />}
+              >
+                @craftzdog
+              </Button>
+            </Link>
+          </ListItem>
+        </List>
+
+ 
+
+        <Box align="center" my={4}>
+          <NextLink href="/posts" scroll={false}>
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="purple">
+              Popular posts
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
   </Layout>
 )
 
