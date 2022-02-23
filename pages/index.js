@@ -24,6 +24,7 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { MdOutlineWavingHand } from 'react-icons/md'
 import { griditem } from '../components/grid-item'
 import thumbYouTube from '../public/images/links/youtube.png'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
@@ -44,12 +45,20 @@ const Home = () => (
 
         <Box flexGrow={1}>
           <Text
-            color={'purple.400'}
+            color={useColorModeValue('purple.500', 'purple.200')}
+            fontSize={{ base: 'md', md: '2xl' }}
           >Hi, my name is</Text>
           <Heading as="h1" variant="page-title">
             JR Mendoza
           </Heading>
-          <p>( Developer / Web Designer )</p>
+          <Text 
+          color={useColorModeValue('gray.700', 'gray.300')}
+          mb="5">( Developer / Web Designer )</Text>
+          <NextLink href="/works" scroll={false}>
+            <Button rightIcon={<MdOutlineWavingHand />} colorScheme="purple">
+              Say Hello
+            </Button>
+          </NextLink>
         </Box>
       </Box>
 
