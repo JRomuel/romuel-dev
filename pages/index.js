@@ -49,7 +49,7 @@ const Home = () => (
             fontSize={{ base: 'md', md: '2xl' }}
           >Hi, my name is</Text>
           <Heading as="h1" variant="page-title">
-            JR Mendoza2
+            JR Mendoza
           </Heading>
           <Text 
           color={useColorModeValue('gray.700', 'gray.300')}
