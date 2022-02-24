@@ -10,12 +10,14 @@ import {
   List,
   ListItem,
   Icon,
+  Flex,
   Text,
   UnorderedList,
   ListIcon,
   useColorModeValue,
   Grid, 
-  GridItem
+  GridItem,
+  Tooltip
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { RiArrowDropRightFill } from 'react-icons/ri'
@@ -24,6 +26,7 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { SiNextdotjs, SiReact, SiLaravel, SiBootstrap, SiChakraui, SiNodedotjs, SiSass } from 'react-icons/si'
 import { MdOutlineWavingHand } from 'react-icons/md'
 import { griditem } from '../components/grid-item'
 import thumbYouTube from '../public/images/links/youtube.png'
@@ -43,10 +46,10 @@ const Home = () => (
 
         <LazyVoxelDog />
 
-        <Box flexGrow={1}>
+        <Box flexGrow={1} mb={['20','0', '0']}>
           <Text
             color={useColorModeValue('purple.500', 'purple.200')}
-            fontSize={{ base: 'md', md: '2xl' }}
+            fontSize={{ base: 'md', md: 'lg' }}
           >Hi, my name is</Text>
           <Heading as="h1" variant="page-title">
             JR Mendoza
@@ -63,8 +66,8 @@ const Home = () => (
       </Box>
 
       <Section delay={0.1}>
-        <Heading as="h3" variant="section-title">
-          About Me
+        <Heading as="h3" display={'Flex'} gap={2} variant="section-title">
+          <Text fontWeight={'normal'} fontSize={'lg'} color={useColorModeValue('purple.500', 'purple.200')}>01. </Text> About Me
         </Heading>
         <Paragraph>
               Hello, I&lsquo;m Romuel, a web developer based on Manila, Philippines who enjoys building things live on the internet. I develop exceptional websites and web apps that provide intuitive, pixel perfect user interfaces with clean design and retina ready display.
@@ -76,41 +79,33 @@ const Home = () => (
               Here are a few technologies I&lsquo;ve been working with recently
         </Text>
 
-
-        <Grid templateColumns='repeat(6, 1fr)' gap={6} mb={5}>
-          <GridItem w='100%' colSpan={{ base: 3, md: 2 }}>
-            <List>
-              <ListItem>
-                <ListIcon as={RiArrowDropRightFill} color='purple.500' />
-                Next.js
-              </ListItem>
-              <ListItem>
-                <ListIcon as={RiArrowDropRightFill} color='purple.500' />
-                React.js
-              </ListItem>
-              <ListItem>
-                <ListIcon as={RiArrowDropRightFill} color='purple.500' />
-                Laravel 6+
-              </ListItem>
-            </List>
-          </GridItem>
-          <GridItem w='100%' colSpan={{ base: 3, md: 2 }}>
-            <List>
-              <ListItem>
-                <ListIcon as={RiArrowDropRightFill} color='purple.500' />
-                Bootstrap
-              </ListItem>
-              <ListItem>
-                <ListIcon as={RiArrowDropRightFill} color='purple.500' />
-                Node.js
-              </ListItem>
-              <ListItem>
-                <ListIcon as={RiArrowDropRightFill} color='purple.500' />
-                SASS
-              </ListItem>
-            </List>
-          </GridItem>
-        </Grid>
+        <Flex gap={4}>
+          <Tooltip hasArrow label='Next.js' fontSize='sm'>
+            <span><Icon as={SiNextdotjs} w={6} h={6} /></span>
+          </Tooltip>
+          <Tooltip hasArrow label='React' fontSize='sm'>
+            <span><Icon as={SiReact} w={6} h={6} /></span>
+          </Tooltip>
+          <Tooltip hasArrow label='Laravel' fontSize='sm'>
+            <span><Icon as={SiLaravel} w={6} h={6} /></span>
+          </Tooltip>
+          <Tooltip hasArrow label='Bootstrap' fontSize='sm'>
+            <span><Icon as={SiBootstrap} w={6} h={6} /></span>
+          </Tooltip>
+        
+          <Tooltip hasArrow label='ChakraUi' fontSize='sm'>
+            <span><Icon as={SiChakraui} w={6} h={6} /></span>
+          </Tooltip>
+        
+          <Tooltip hasArrow label='Node.js' fontSize='sm'>
+            <span><Icon as={SiNodedotjs} w={6} h={6} /></span>
+          </Tooltip>
+        
+          <Tooltip hasArrow label='SASS' fontSize='sm'>
+            <span><Icon as={SiSass} w={6} h={6} /></span>
+          </Tooltip>
+      
+        </Flex>
 
         <Box align="center"  my={4}>
           <NextLink href="/works" scroll={false}>

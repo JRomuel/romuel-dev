@@ -22,13 +22,14 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const footPrintImg = `/images/logo-new-2.0.svg`
+  const footPrintImg = `/images/logo-new-1.6.svg`
+  const footPrintImgRev = `/images/logo-new-rev-1.6.svg`
 
   return (
     <Link href="/">
       <a>
         <LogoBox>
-          <Image src={footPrintImg} width={30} height={30} alt="logo" />
+          <Image src={useColorModeValue(footPrintImgRev, footPrintImg)} width={30} height={30} alt="logo" />
       
         </LogoBox>
       </a>
