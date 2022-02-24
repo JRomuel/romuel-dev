@@ -52,7 +52,7 @@ const VoxelDog = () => {
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scH * 0.005 + 5.8
+      const scale = scH * 0.005 + 4.5
       console.log(scale);
       const camera = new THREE.OrthographicCamera(
         -scale,
@@ -80,10 +80,11 @@ const VoxelDog = () => {
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
+      controls.autoRotateSpeed = 0.3
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, '/myRoom.glb', {
+      loadGLTFModel(scene, '/box2.glb', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
