@@ -21,12 +21,12 @@ import {
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { RiArrowDropRightFill } from 'react-icons/ri'
-import Layout from '../components/layouts/article'
+import Layout from '../components/layouts/indexLayout'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import { SiNextdotjs, SiReact, SiLaravel, SiBootstrap, SiChakraui, SiNodedotjs, SiSass } from 'react-icons/si'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
+import { SiNextdotjs, SiReact, SiLaravel, SiBootstrap, SiChakraui, SiNodedotjs, SiSass, SiUpwork, SiFiverr } from 'react-icons/si'
 import { MdOutlineWavingHand } from 'react-icons/md'
 import { griditem } from '../components/grid-item'
 import thumbYouTube from '../public/images/links/youtube.png'
@@ -116,95 +116,92 @@ const Home = () => (
         </Box>
       </Section>
       <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
-          Bio
+        <Heading as="h3" display={'Flex'} gap={2} variant="section-title">
+          <Text fontWeight={'normal'} fontSize={'lg'} color={useColorModeValue('purple.500', 'purple.200')}>02. </Text>Bio
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear>1995</BioYear>
+          Born in Manila, Philippines.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&lsquo;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
+          <BioYear>2016</BioYear>
+          Completed the Bachelor of Science in Computer Engineering
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
+          <BioYear>2017</BioYear>
+          Worked at Yazaki Philippines as Designer
         </BioSection>
         <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Works as a freelance
+          <BioYear>2018 to present</BioYear>
+          Work as full-time Web developer at Esco Philippines Inc.
+        </BioSection>
+        <BioSection>
+          <BioYear>2021 to present</BioYear>
+          Works as a part-time freelancer
         </BioSection>
       </Section>
 
       <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          I ♥
-        </Heading>
-        <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
-        </Paragraph>
-      </Section>
-
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          On the web
+        <Heading as="h3" display={'Flex'} gap={2} variant="section-title">
+        <Text fontWeight={'normal'} fontSize={'lg'} color={useColorModeValue('purple.500', 'purple.200')}>03. </Text>On the web
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://github.com/JRomuel" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="teal"
+                colorScheme="purple"
                 leftIcon={<Icon as={IoLogoGithub} />}
               >
-                @craftzdog
+                @JRomuel
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+            <Link href="https://www.linkedin.com/in/john-romuel-mendoza-95093114a/" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
+                colorScheme="purple"
+                leftIcon={<Icon as={IoLogoLinkedin} />}
               >
-                @inkdrop_app (English)
+                @John Romuel Mendoza
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
+            <Link href="https://www.instagram.com/jrmendoza_09/" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
+                colorScheme="purple"
                 leftIcon={<Icon as={IoLogoInstagram} />}
               >
-                @craftzdog
+                @jrmendoza_09
               </Button>
             </Link>
           </ListItem>
+          <ListItem>
+            <Link href="https://www.upwork.com/freelancers/~0189c8fbe157c392a7" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="purple"
+                leftIcon={<Icon as={SiUpwork} />}
+              >
+                @John Romuel M.
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://www.fiverr.com/jrmendoza182" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="purple"
+                leftIcon={<Icon as={SiFiverr} />}
+              >
+                @jrmendoza
+              </Button>
+            </Link>
+          </ListItem>
+
         </List>
 
  

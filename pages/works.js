@@ -13,25 +13,29 @@ import thumbPichu2 from '../public/images/works/pichu2_eyecatch.png'
 import thumbFreeDBTagger from '../public/images/works/freedbtagger_eyecatch.png'
 import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
 
+
+import thumbEscolifeSciences from '../public/images/works/escolifesciences-proj-min.png'
+import thumbEscoMedical from '../public/images/works/esco-medical-proj-removebg-min.png'
+
+
 const Works = () => (
   <Layout title="Works">
     <Container>
-      <Heading as="h3" fontSize={20} mb={4}>
+      <Heading as="h2" fontSize={20} mb={8}>
         Works
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
-            A Markdown note-taking app with 100+ plugins, cross-platform and
-            encrypted data sync support
+          <WorkGridItem id="inkdrop" title="Escolifesciences Website" thumbnail={thumbEscolifeSciences}>
+            Escolifesciences Website
           </WorkGridItem>
         </Section>
         <Section>
           <WorkGridItem
             id="walknote"
-            title="walknote"
-            thumbnail={thumbWalknote}
+            title="Esco Medical Website"
+            thumbnail={thumbEscoMedical}
           >
             Music recommendation app for iOS
           </WorkGridItem>
@@ -40,7 +44,7 @@ const Works = () => (
         <Section delay={0.1}>
           <WorkGridItem
             id="fourpainters"
-            title="The four painters"
+            title="Esco Pharma Website"
             thumbnail={thumbFourPainters}
           >
             A video work generated with deep learning, imitating famous four
@@ -48,7 +52,7 @@ const Works = () => (
           </WorkGridItem>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={thumbMenkiki} title="Menkiki">
+          <WorkGridItem id="menkiki" thumbnail={thumbMenkiki} title="Portfolio Website">
             An app that suggests ramen(noodle) shops based on a given photo of
             the ramen you want to eat
           </WorkGridItem>
