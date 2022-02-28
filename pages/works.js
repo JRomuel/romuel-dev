@@ -14,8 +14,13 @@ import thumbFreeDBTagger from '../public/images/works/freedbtagger_eyecatch.png'
 import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
 
 
-import thumbEscolifeSciences from '../public/images/works/escolifesciences-proj-min.png'
-import thumbEscoMedical from '../public/images/works/esco-medical-proj-removebg-min.png'
+import thumbEscolifeSciences from '../public/images/works/escolifesciencesThumb.jpg'
+import thumbEscoMedical from '../public/images/works/esco-medical-thumb.jpg'
+import thumbEscoPharma from '../public/images/works/esco-pharma-thumb.jpg'
+import thumbMyPortfolio from '../public/images/works/my-portfolio-thumb.jpg'
+import mechlabsThumb from '../public/images/works/mechlabs-thumb.jpg'
+import smartSpaceThumb from '../public/images/works/smart-space.jpg'
+import alienArmadaThumb from '../public/images/works/Alien-Armada.jpg'
 
 
 const Works = () => (
@@ -45,14 +50,14 @@ const Works = () => (
           <WorkGridItem
             id="fourpainters"
             title="Esco Pharma Website"
-            thumbnail={thumbFourPainters}
+            thumbnail={thumbEscoPharma}
           >
             A video work generated with deep learning, imitating famous four
             painters like Van Gogh
           </WorkGridItem>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={thumbMenkiki} title="Portfolio Website">
+          <WorkGridItem id="menkiki" thumbnail={thumbMyPortfolio} title="Portfolio Website">
             An app that suggests ramen(noodle) shops based on a given photo of
             the ramen you want to eat
           </WorkGridItem>
@@ -63,7 +68,7 @@ const Works = () => (
         <Divider my={6} />
 
         <Heading as="h3" fontSize={20} mb={4}>
-          Collaborations
+          Web Design Conversion
         </Heading>
       </Section>
 
@@ -71,14 +76,14 @@ const Works = () => (
         <Section delay={0.3}>
           <WorkGridItem
             id="modetokyo"
-            thumbnail={thumbModeTokyo}
-            title="mode.tokyo"
+            thumbnail={mechlabsThumb}
+            title="Mechlabs"
           >
             The mode magazine for understanding to personally enjoy Japan
           </WorkGridItem>
         </Section>
         <Section delay={0.3}>
-          <WorkGridItem id="styly" thumbnail={thumbStyly} title="Styly">
+          <WorkGridItem id="styly" thumbnail={smartSpaceThumb} title="Smart Space">
             A VR Creative tools for fashion brands
           </WorkGridItem>
         </Section>
@@ -94,25 +99,11 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.5}>
-          <WorkGridItem id="pichu2" thumbnail={thumbPichu2} title="Pichu*Pichu">
+          <WorkGridItem id="pichu2" thumbnail={alienArmadaThumb} title="Alien-Armada">
             Twitter client app for iPhone Safari
           </WorkGridItem>
         </Section>
-        <Section delay={0.5}>
-          <WorkGridItem
-            id="freedbtagger"
-            thumbnail={thumbFreeDBTagger}
-            title="freeDBTagger"
-          >
-            Automatic audio file tagging tool using FreeDB for Windows
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.6}>
-          <WorkGridItem id="amembo" thumbnail={thumbAmembo} title="Amembo">
-            P2P private file sharing tool with MSN Messenger integration for
-            Windows
-          </WorkGridItem>
-        </Section>
+
       </SimpleGrid>
     </Container>
   </Layout>

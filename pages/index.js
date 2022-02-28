@@ -57,11 +57,10 @@ const Home = () => (
           <Text 
           color={useColorModeValue('gray.700', 'gray.300')}
           mb="5">( Developer / Web Designer )</Text>
-          <NextLink href="/works" scroll={false}>
-            <Button rightIcon={<MdOutlineWavingHand />} colorScheme="purple">
+      
+            <Button rightIcon={<MdOutlineWavingHand />} as="a" href="mailto:johnromuelmendoza@yahoo.com" textDecoration="none" colorScheme="purple">
               Say Hello
             </Button>
-          </NextLink>
         </Box>
       </Box>
 

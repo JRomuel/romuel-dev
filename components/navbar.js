@@ -83,16 +83,11 @@ const Navbar = props => {
             </LinkItem>
   
           </Stack>
-
-
-          <IconButton
-      
-          aria-label="Toggle theme"
-          bg="transparent"
-          icon={<IoLogoGithub />}
-          _target="_blank"
-          href="https://github.com/craftzdog/craftzdog-homepage"
-        ></IconButton>
+            <IconButton as="a" href="https://github.com/JRomuel/romuel-dev" target="_blank"
+            bg="transparent"
+            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+            icon={<IoLogoGithub />}
+            ></IconButton>
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
@@ -112,7 +107,7 @@ const Navbar = props => {
                 </NextLink>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
+                  href="https://github.com/JRomuel/romuel-dev"
                 >
                   View Source
                 </MenuItem>
