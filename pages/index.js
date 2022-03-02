@@ -49,7 +49,7 @@ const Home = () => (
             color={useColorModeValue('purple.500', 'purple.200')}
             fontSize={{ base: 'md', md: 'lg' }}
           >Hi, my name is</Text>
-          <Heading as="h1" fontWeight="400" variant="page-title">
+          <Heading as="h1" variant="page-title">
             JR Mendoza 
           </Heading>
           <Text 
