@@ -19,7 +19,26 @@ const Main = ({ children, router }) => {
           <meta property="og:site_name" content="Jr Mendoza" />
           <meta property="og:type" content="website" />
           <meta property="og:image" content="/card.jpg" />
+          
           <title>Jr Mendoza | Home</title>
+
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-J6TZ8DDZ7R`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-J6TZ8DDZ7R', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
         </Head>
   
         <NavBar path={router.asPath} />
