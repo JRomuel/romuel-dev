@@ -18,7 +18,7 @@ const Main = ({ children, router }) => {
           <link rel="shortcut icon" href="/favicon2.ico" type="image/x-icon" />
           <meta property="og:site_name" content="Jr Mendoza" />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="/card.png" />
+          <meta property="og:image" content="/card.jpg" />
           <title>Jr Mendoza | Home</title>
         </Head>
   
