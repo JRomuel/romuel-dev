@@ -26,11 +26,9 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
-import { SiNextdotjs, SiReact, SiLaravel, SiBootstrap, SiChakraui, SiNodedotjs, SiSass, SiUpwork, SiFiverr } from 'react-icons/si'
+import { SiNextdotjs, SiReact, SiLaravel, SiBootstrap, SiChakraui, SiNodedotjs, SiSass, SiUpwork, SiFiverr, SiShopify, SiYahoo } from 'react-icons/si'
 import { MdOutlineWavingHand } from 'react-icons/md'
 import { griditem } from '../components/grid-item'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import VoxelDogLoader from '../components/voxel-dog-loader'
 import dynamic from 'next/dynamic'
 const LazyVoxelDog = dynamic(() => import('../components/voxel-dog'), {
@@ -51,8 +49,8 @@ const Home = () => (
             color={useColorModeValue('purple.500', 'purple.200')}
             fontSize={{ base: 'md', md: 'lg' }}
           >Hi, my name is</Text>
-          <Heading as="h1" variant="page-title">
-            JR Mendoza
+          <Heading as="h1" fontWeight="400" variant="page-title">
+            JR Mendoza 
           </Heading>
           <Text 
           color={useColorModeValue('gray.700', 'gray.300')}
@@ -102,6 +100,9 @@ const Home = () => (
         
           <Tooltip hasArrow label='SASS' fontSize='sm'>
             <span><Icon as={SiSass} w={6} h={6} /></span>
+          </Tooltip>
+          <Tooltip hasArrow label='Shopify' fontSize='sm'>
+            <span><Icon as={SiShopify} w={6} h={6} /></span>
           </Tooltip>
       
         </Flex>
@@ -197,6 +198,17 @@ const Home = () => (
                 leftIcon={<Icon as={SiFiverr} />}
               >
                 @jrmendoza
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="mailto:johnromuelmendoza@yahoo.com" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="purple"
+                leftIcon={<Icon as={SiYahoo} />}
+              >
+                johnromuelmendoza@yahoo.com
               </Button>
             </Link>
           </ListItem>

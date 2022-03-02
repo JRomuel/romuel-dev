@@ -1,18 +1,9 @@
-import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider, Flex, Tooltip, Icon } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
-
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
-import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
-import thumbFourPainters from '../public/images/works/the-four-painters_eyecatch.jpg'
-import thumbMenkiki from '../public/images/works/menkiki_eyecatch.png'
-import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
-import thumbStyly from '../public/images/works/styly_eyecatch.png'
-import thumbPichu2 from '../public/images/works/pichu2_eyecatch.png'
-import thumbFreeDBTagger from '../public/images/works/freedbtagger_eyecatch.png'
-import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
-
+import { SiNextdotjs, SiReact, SiLaravel, SiBootstrap, SiChakraui, SiNodedotjs, SiSass, SiUpwork, SiFiverr, SiShopify, SiYahoo, SiMysql, SiJavascript } from 'react-icons/si'
+import { GrMysql } from 'react-icons/gr'
 
 import thumbEscolifeSciences from '../public/images/works/escolifesciencesThumb.jpg'
 import thumbEscoMedical from '../public/images/works/esco-medical-thumb.jpg'
@@ -32,35 +23,90 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="inkdrop" title="Escolifesciences Website" thumbnail={thumbEscolifeSciences}>
-            Escolifesciences Website
+          <WorkGridItem link="https://www.escolifesciences.com/" title="Escolifesciences Website" thumbnail={thumbEscolifeSciences}>
+            Web Development
           </WorkGridItem>
+          <Flex gap={4} flexWrap="wrap" justifyContent="center">
+            <Tooltip hasArrow label='Laravel' fontSize='sm'>
+              <span><Icon as={SiLaravel} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='Bootstrap' fontSize='sm'>
+              <span><Icon as={SiBootstrap} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='SASS' fontSize='sm'>
+              <span><Icon as={SiSass} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='Mysql' fontSize='sm'>
+              <span><Icon as={GrMysql} w={4} h={4} /></span>
+            </Tooltip>
+        
+          </Flex>
         </Section>
         <Section>
           <WorkGridItem
-            id="walknote"
+            link="https://www.esco-medical.com/"
             title="Esco Medical Website"
             thumbnail={thumbEscoMedical}
           >
-            Music recommendation app for iOS
+            CMS development
           </WorkGridItem>
+          <Flex gap={4} flexWrap="wrap" justifyContent="center">
+            <Tooltip hasArrow label='Laravel' fontSize='sm'>
+              <span><Icon as={SiLaravel} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='Bootstrap' fontSize='sm'>
+              <span><Icon as={SiBootstrap} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='SASS' fontSize='sm'>
+              <span><Icon as={SiSass} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='Mysql' fontSize='sm'>
+              <span><Icon as={GrMysql} w={4} h={4} /></span>
+            </Tooltip>
+          </Flex>
         </Section>
 
         <Section delay={0.1}>
           <WorkGridItem
-            id="fourpainters"
+            link="https://www.escopharma.com/"
             title="Esco Pharma Website"
             thumbnail={thumbEscoPharma}
           >
-            A video work generated with deep learning, imitating famous four
-            painters like Van Gogh
+            CMS development
           </WorkGridItem>
+          <Flex gap={4} flexWrap="wrap" justifyContent="center">
+            <Tooltip hasArrow label='Laravel' fontSize='sm'>
+              <span><Icon as={SiLaravel} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='Bootstrap' fontSize='sm'>
+              <span><Icon as={SiBootstrap} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='SASS' fontSize='sm'>
+              <span><Icon as={SiSass} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='Mysql' fontSize='sm'>
+              <span><Icon as={GrMysql} w={4} h={4} /></span>
+            </Tooltip>
+          </Flex>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={thumbMyPortfolio} title="Portfolio Website">
-            An app that suggests ramen(noodle) shops based on a given photo of
-            the ramen you want to eat
+          <WorkGridItem link="https://jrmendoza.vercel.app/" thumbnail={thumbMyPortfolio} title="Portfolio Website">
+            Personal React Project
           </WorkGridItem>
+          <Flex gap={4} justifyContent="center" flexWrap="wrap">
+            <Tooltip hasArrow label='Next.js' fontSize='sm'>
+              <span><Icon as={SiNextdotjs} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='React' fontSize='sm'>
+              <span><Icon as={SiReact} w={4} h={4} /></span>
+            </Tooltip>
+          
+            <Tooltip hasArrow label='ChakraUi' fontSize='sm'>
+              <span><Icon as={SiChakraui} w={4} h={4} /></span>
+            </Tooltip>
+          
+        
+          </Flex>
         </Section>
       </SimpleGrid>
 
@@ -75,17 +121,34 @@ const Works = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.3}>
           <WorkGridItem
-            id="modetokyo"
+            link="https://mechlabs.ai/"
             thumbnail={mechlabsThumb}
             title="Mechlabs"
           >
-            The mode magazine for understanding to personally enjoy Japan
+            Figma to HTML,CSS
           </WorkGridItem>
+          <Flex gap={4} flexWrap="wrap" justifyContent="center">
+            <Tooltip hasArrow label='Bootstrap' fontSize='sm'>
+              <span><Icon as={SiBootstrap} w={4} h={4} /></span>
+            </Tooltip>
+          </Flex>
         </Section>
         <Section delay={0.3}>
-          <WorkGridItem id="styly" thumbnail={smartSpaceThumb} title="Smart Space">
-            A VR Creative tools for fashion brands
+          <WorkGridItem link="https://smart-space.vercel.app/" thumbnail={smartSpaceThumb} title="Smart Space">
+            Figma to React
           </WorkGridItem>
+          <Flex gap={4} flexWrap="wrap" justifyContent="center">
+          <Tooltip hasArrow label='Next.js' fontSize='sm'>
+              <span><Icon as={SiNextdotjs} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='React' fontSize='sm'>
+              <span><Icon as={SiReact} w={4} h={4} /></span>
+            </Tooltip>
+          
+            <Tooltip hasArrow label='ChakraUi' fontSize='sm'>
+              <span><Icon as={SiChakraui} w={4} h={4} /></span>
+            </Tooltip>
+          </Flex>
         </Section>
       </SimpleGrid>
 
@@ -99,9 +162,15 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.5}>
-          <WorkGridItem id="pichu2" thumbnail={alienArmadaThumb} title="Alien-Armada">
-            Twitter client app for iPhone Safari
+          <WorkGridItem link="https://jromuel.github.io/Alien-Armada/" thumbnail={alienArmadaThumb} title="Alien-Armada">
+            Pure javascript shooting game
           </WorkGridItem>
+          <Flex gap={4} flexWrap="wrap" justifyContent="center">
+            <Tooltip hasArrow label='Javascript' fontSize='sm'>
+              <span><Icon as={SiJavascript} w={4} h={4} /></span>
+            </Tooltip>
+        
+          </Flex>
         </Section>
 
       </SimpleGrid>

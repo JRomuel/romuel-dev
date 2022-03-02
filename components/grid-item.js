@@ -1,6 +1,7 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
+import { Box, Text, LinkBox, LinkOverlay, Link, Icon, Heading  } from '@chakra-ui/react'
+import { BiLinkExternal } from 'react-icons/bi'
 import { Global } from '@emotion/react'
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
@@ -14,16 +15,16 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
         loading="lazy"
       />
       <LinkOverlay href={href} target="_blank">
-        <Text mt={2}>{title}</Text>
+        <Text mt={2}>{title} </Text>
       </LinkOverlay>
       <Text fontSize={14}>{children}</Text>
     </LinkBox>
   </Box>
 )
 
-export const WorkGridItem = ({ children, id, title, thumbnail }) => (
-  <Box w="100%" textAlign="center">
-    <NextLink href={`/works/${id}`}>
+export const WorkGridItem = ({ children, link, title, thumbnail }) => (
+  <Box w="100%" textAlign="center" mb={5}>
+
       <LinkBox cursor="pointer">
         <Image
           src={thumbnail}
@@ -31,14 +32,13 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
           className="grid-item-thumbnail"
           placeholder="blur"
         />
-        <LinkOverlay href={`/works/${id}`}>
-          <Text mt={2} fontSize={20}>
-            {title}
-          </Text>
+        <LinkOverlay href={link} target="_blank">
+          <Heading mt={2} as="h5" fontSize={18} fontWeight="normal">
+            {title} <Icon as={BiLinkExternal} w={4} h={4} />
+          </Heading>
         </LinkOverlay>
         <Text fontSize={14}>{children}</Text>
       </LinkBox>
-    </NextLink>
   </Box>
 )
 

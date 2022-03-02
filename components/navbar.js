@@ -105,12 +105,6 @@ const Navbar = props => {
                 <NextLink href="/posts" passHref scroll={false}>
                   <MenuItem as={Link}>Posts</MenuItem>
                 </NextLink>
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/JRomuel/romuel-dev"
-                >
-                  View Source
-                </MenuItem>
               </MenuList>
             </Menu>
           </Box>
