@@ -5,13 +5,14 @@ import { WorkGridItem } from '../components/grid-item'
 import { SiNextdotjs, SiReact, SiLaravel, SiBootstrap, SiChakraui, SiNodedotjs, SiSass, SiUpwork, SiFiverr, SiShopify, SiYahoo, SiMysql, SiJavascript } from 'react-icons/si'
 import { GrMysql } from 'react-icons/gr'
 
-import thumbEscolifeSciences from '../public/images/works/escolifesciencesThumb.jpg'
+import thumbEscolifeSciences from '../public/images/works/escolifesciencesThumb2.jpg'
 import thumbEscoMedical from '../public/images/works/esco-medical-thumb.jpg'
 import thumbEscoPharma from '../public/images/works/esco-pharma-thumb.jpg'
 import thumbMyPortfolio from '../public/images/works/my-portfolio-thumb.jpg'
 import mechlabsThumb from '../public/images/works/mechlabs-thumb.jpg'
 import smartSpaceThumb from '../public/images/works/smart-space.jpg'
 import alienArmadaThumb from '../public/images/works/Alien-Armada.jpg'
+import earthTechThumb from '../public/images/works/earthTech.jpg'
 
 
 const Works = () => (
@@ -22,6 +23,26 @@ const Works = () => (
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
+      <Section>
+          <WorkGridItem link="https://earthtech.app/" title="Earthtech Website" thumbnail={earthTechThumb}>
+            Web Development
+          </WorkGridItem>
+          <Flex gap={4} flexWrap="wrap" justifyContent="center">
+            <Tooltip hasArrow label='Laravel' fontSize='sm'>
+              <span><Icon as={SiLaravel} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='Bootstrap' fontSize='sm'>
+              <span><Icon as={SiBootstrap} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='SASS' fontSize='sm'>
+              <span><Icon as={SiSass} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='Mysql' fontSize='sm'>
+              <span><Icon as={GrMysql} w={4} h={4} /></span>
+            </Tooltip>
+        
+          </Flex>
+        </Section>
         <Section>
           <WorkGridItem link="https://www.escolifesciences.com/" title="Escolifesciences Website" thumbnail={thumbEscolifeSciences}>
             Web Development
