@@ -120,24 +120,24 @@ const Home = () => (
           <Text fontWeight={'normal'} fontSize={'lg'} color={useColorModeValue('purple.500', 'purple.200')}>02. </Text>Bio
         </Heading>
         <BioSection>
-          <BioYear>1995</BioYear>
-          Born in Manila, Philippines.
-        </BioSection>
-        <BioSection>
-          <BioYear>2016</BioYear>
-          Completed the Bachelor of Science in Computer Engineering
-        </BioSection>
-        <BioSection>
-          <BioYear>2017</BioYear>
-          Worked at Yazaki Philippines as Designer
+          <BioYear>2021 to present</BioYear>
+          Works as a part-time freelancer
         </BioSection>
         <BioSection>
           <BioYear>2018 to present</BioYear>
           Work as full-time Web developer at Esco Philippines Inc.
         </BioSection>
         <BioSection>
-          <BioYear>2021 to present</BioYear>
-          Works as a part-time freelancer
+          <BioYear>2017</BioYear>
+          Worked at Yazaki Philippines as Designer
+        </BioSection>
+        <BioSection>
+          <BioYear>2016</BioYear>
+          Completed the Bachelor of Science in Computer Engineering
+        </BioSection>
+        <BioSection>
+          <BioYear>1995</BioYear>
+          Born in Manila, Philippines.
         </BioSection>
       </Section>
 
