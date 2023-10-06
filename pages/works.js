@@ -45,7 +45,7 @@ const Works = () => (
         </Section>
 
         <Section>
-          <WorkGridItem title="Hearing Tracker App" thumbnail={hearingTrackerThumb}>
+          <WorkGridItem link="https://www.hearingtracker.com/" title="Hearing Tracker App" thumbnail={hearingTrackerThumb}>
             Figma Design Conversion
           </WorkGridItem>
           <Flex gap={4} flexWrap="wrap" justifyContent="center">
