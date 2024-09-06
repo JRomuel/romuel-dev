@@ -2,7 +2,7 @@ import { Container, Heading, SimpleGrid, Divider, Flex, Tooltip, Icon } from '@c
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
-import { SiNextdotjs, SiReact, SiLaravel, SiBootstrap, SiChakraui, SiNodedotjs, SiSass, SiUpwork, SiFiverr, SiShopify, SiYahoo, SiMysql, SiJavascript, SiTailwindcss } from 'react-icons/si'
+import { SiNextdotjs, SiReact, SiLaravel, SiBootstrap, SiChakraui, SiNodedotjs, SiSass, SiUpwork, SiFiverr, SiShopify, SiYahoo, SiMysql, SiJavascript, SiTailwindcss, SiFramer } from 'react-icons/si'
 import { GrMysql } from 'react-icons/gr'
 
 import thumbEscolifeSciences from '../public/images/works/escolifesciencesThumb2.jpg'
@@ -15,6 +15,7 @@ import alienArmadaThumb from '../public/images/works/Alien-Armada.jpg'
 import earthTechThumb from '../public/images/works/earthTech.jpg'
 import hearingTrackerThumb from '../public/images/works/hearing-tracker.jpg'
 import oneNaturalwayThumb from '../public/images/works/oneNaturalway.jpg'
+import southernPlanners from '../public/images/works/southern-planners.jpg'
 
 
 const Works = () => (
@@ -26,6 +27,23 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
 
+        <Section>
+          <WorkGridItem link="https://www.southern-planners.com/" title="Southern Planners" thumbnail={southernPlanners}>
+            Web Development
+          </WorkGridItem>
+          <Flex gap={4} flexWrap="wrap" justifyContent="center">
+            <Tooltip hasArrow label='Next.js' fontSize='sm'>
+              <span><Icon as={SiNextdotjs} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='SASS' fontSize='sm'>
+              <span><Icon as={SiSass} w={4} h={4} /></span>
+            </Tooltip>
+            <Tooltip hasArrow label='Framer Motion' fontSize='sm'>
+              <span><Icon as={SiFramer} w={4} h={4} /></span>
+            </Tooltip>
+        
+          </Flex>
+        </Section>
         <Section>
           <WorkGridItem title="1 Natural Way App" thumbnail={oneNaturalwayThumb}>
             Web Development
